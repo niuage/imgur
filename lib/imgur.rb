@@ -1,17 +1,11 @@
 require "imgur/version"
 
-require "imgur/model"
-require "imgur/album"
-require "imgur/image"
-
 module Imgur
-  class Configuration
-    attr_accessor :client_id
+  autoload :Model, 'imgur/model'
+  autoload :Album, 'imgur/album'
+  autoload :Image, 'imgur/image'
 
-    def initialize
-      self.client_id = nil
-    end
-  end
+  autoload :Configuration, 'imgur/configuration'
 
   class << self
     attr_accessor :config
