@@ -11,7 +11,8 @@ module Imgur
     end
 
     def cover_link
-      find_image_by_id(cover).try :link
+      image = find_image_by_id(cover)
+      image.link if image
     end
 
     def find_image_by_id(id)
