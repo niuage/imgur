@@ -4,13 +4,13 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'imgur/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "imgur"
+  spec.name          = "simple_imgur"
   spec.version       = Imgur::VERSION
   spec.authors       = ["Robin Boutros"]
   spec.email         = ["niuage@gmail.com"]
-  spec.description   = %q{TODO: Write a gem description}
-  spec.summary       = %q{TODO: Write a gem summary}
-  spec.homepage      = ""
+  spec.description   = %q{Super simple gem to get Imgur public albums and images}
+  spec.summary       = %q{Super simple gem to get Imgur public albums and images}
+  spec.homepage      = "https://github.com/niuage/imgur"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)
