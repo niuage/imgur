@@ -7,8 +7,15 @@ module Imgur
     end
 
     def image_links
-      images.map &:link
+      @image_links ||= images.map &:link
     end
 
+    def cover_link
+      find_image_by_id(cover).try :link
+    end
+
+    def find_image_by_id(id)
+      images.find { |i| i.id == id }
+    end
   end
 end
