@@ -6,5 +6,9 @@ module Imgur
       @images ||= Imgur::Image.collection(attributes["images"])
     end
 
+    def image_links
+      images.map &:link
+    end
+
   end
 end
